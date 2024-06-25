@@ -5,7 +5,7 @@ use std::string::ToString;
 
 use chrono::DateTime;
 use cubecobra::models::{CobraCard, CobraCube, HistoryPost, PackageChange};
-use git2::{IndexAddOption, Oid, Repository, Signature, Time};
+use git2::{IndexAddOption, Oid, Repository, RepositoryInitOptions, Signature, Time};
 
 const NULL: &str = "~~";
 fn write_package_file(package_file: &Path, package: &Vec<CobraCard>) -> Result<(), Box<dyn Error>> {
@@ -57,10 +57,10 @@ fn write_package_file(package_file: &Path, package: &Vec<CobraCard>) -> Result<(
     Ok(())
 }
 
-fn readme_output(repo_root: &str, cube: &CobraCube) -> Result<(), io::Error> {
+fn write_overview_file(repo_root: &str, cube: &CobraCube) -> Result<(), io::Error> {
     std::fs::write::<String, String>(
         format!("{}/{}", repo_root, "README.md"),
-        format!("# {}\n\n{}\n", cube.name, cube.description)
+        format!("# {}\n\n![{}]({})\n{}\n", cube.name, cube.image_name, cube.image.uri, cube.description)
     )?;
 
     Ok(())
@@ -181,19 +181,20 @@ pub fn generate_git_history(
     cube: &CobraCube,
     changes: &Vec<HistoryPost>
 ) -> Result<(), Box<dyn Error>> {
-    let repo = Repository::init(&Path::new(&repo_root))?;
+    let repo = Repository::init_opts(&Path::new(&repo_root), RepositoryInitOptions::new().no_reinit(true))
+        .expect(&format!("Repo already exists at {}", &repo_root));
 
-    readme_output(&repo_root, &cube)?;
+    write_overview_file(&repo_root, &cube)?;
 
     let mut mainboard: Vec<CobraCard> = cube.cards.mainboard.clone();
     mainboard.sort_by(|a, b| a.index.unwrap_or(0).cmp(&b.index.unwrap_or(0)));
     let mainboard_path = format!("{}/{}", repo_root, "mainboard");
     let mainboard_path = Path::new(&mainboard_path);
 
-    // let mut maybeboard = cube.cards.maybebord.clone().unwrap_or(Vec::new()).clone();
-    // maybeboard.sort_by(|a, b| a.index.unwrap_or(0).cmp(&b.index.unwrap_or(0)));
-    // let maybeboard_path = format!("{}/{}", repo_root, "mainboard");
-    // let maybeboard_path = Path::new(&maybeboard_path);
+    let mut maybeboard = cube.cards.maybeboard.clone();
+    maybeboard.sort_by(|a, b| a.index.unwrap_or(0).cmp(&b.index.unwrap_or(0)));
+    let maybeboard_path = format!("{}/{}", repo_root, "maybeboard");
+    let maybeboard_path = Path::new(&maybeboard_path);
 
     let mut timestamp: i64 = 0;
 
@@ -204,34 +205,34 @@ pub fn generate_git_history(
                 revert_changelog(&mut mainboard, &mainboard_changes);
             }
 
-            // if let Some(maybeboard_changes) = &changelog.maybeboard {
-            //     revert_changelog(&mut maybeboard, &maybeboard_changes)
-            // }
+            if let Some(maybeboard_changes) = &changelog.maybeboard {
+                revert_changelog(&mut maybeboard, &maybeboard_changes)
+            }
         }
     }
 
     write_package_file(mainboard_path,  &mainboard)?;
-    // write_package_file(maybeboard_path, &maybeboard)?;
+    write_package_file(maybeboard_path, &maybeboard)?;
     // write_data_file()
     let mut oid = commit(&repo, &cube.owner.username, timestamp - 1, "initial cube", None)?;
 
     for change in changes.iter().rev() {
         timestamp = change.date.unwrap_or(timestamp.clone() + 1);
         if let Some(changelog) = &change.changelog {
-            let mut count: usize = 0;
+            let mut num_pgk_changes: usize = 0;
             if let Some(mainboard_changes) = &changelog.mainboard {
                 apply_changelog(cube, &mut mainboard, &mainboard_changes);
                 write_package_file(&mainboard_path, &mainboard)?;
-                count+=1;
+                num_pgk_changes +=1;
             }
 
-            // if let Some(maybeboard_changes) = &changelog.maybeboard {
-            //     apply_changelog(cube, &mut maybeboard, &maybeboard_changes);
-            //     // write_package_file(&maybeboard_path, &maybeboard)?;
-            //     count+=1;
-            // }
+            if let Some(maybeboard_changes) = &changelog.maybeboard {
+                apply_changelog(cube, &mut maybeboard, &maybeboard_changes);
+                write_package_file(&maybeboard_path, &maybeboard)?;
+                num_pgk_changes +=1;
+            }
 
-            if count > 0 {
+            if num_pgk_changes > 0 {
                 // write_data_file()
                 oid = commit(&repo, &cube.owner.username, timestamp, "change mode", Some(oid))?;
             }

@@ -1,4 +1,4 @@
-use std::fs;
+use std::fs::{read_to_string, remove_dir_all};
 use std::thread::sleep;
 use std::time::Duration;
 
@@ -10,7 +10,7 @@ use canal_dredger::ingest::cubecobra::generate_git_history;
 fn real_main() {
     // get args
     let cube_id = "soskgy";
-    let repo_root = format!("~/tmp/{}", cube_id);
+    let repo_root = format!("./tmp/{}", cube_id);
 
     let ccconfig = cubecobra::apis::configuration::Configuration::new();
     let cube = cube_api_cube_json_cube_id_get(&ccconfig, cube_id).unwrap();
@@ -36,15 +36,28 @@ fn real_main() {
 
 // used to manually test generate_git_history
 fn main() {
+    // arg
+    let cube_id = "andymangold";
+    let repo_root = format!("./tmp/{}", cube_id);
+
+    // arg
+    let rebuild_repo = false;
+    if rebuild_repo {
+        remove_dir_all(&repo_root).unwrap();
+    }
+
+    let cube_path = format!("./res/{}/cube-sample.json", cube_id);
     let cube: CobraCube = serde_json::from_str(
-        &fs::read_to_string("./res/andymangold/cube-sample.json").unwrap()
+        &read_to_string(cube_path).unwrap()
     ).unwrap();
+
+    let history_path = format!("./res/{}/history-sample.json", cube_id);
     let history: HistoryPage = serde_json::from_str(
-        &fs::read_to_string("./res/andymangold/history-sample-3.json").unwrap()
+        &read_to_string(history_path).unwrap()
     ).unwrap();
 
     generate_git_history(
-        "./tmp/andymangold",
+        &repo_root,
         &cube,
         &history.posts.unwrap()
     ).unwrap();
