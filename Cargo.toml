@@ -1,10 +1,10 @@
 [package]
 name = "canal-dredger"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 [dependencies]
-cubecobra = { path = "../mtgql-js/models/clients/cubecobra-rs"}
+cubecobra_client = { path = "../mtgql-js/models/clients/cubecobra-rs"}
 mtgql = { path = "../mtgql-js/models/clients/rust" }
 
 csv = "1.3.0"

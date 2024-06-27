@@ -1,1 +1,3 @@
-pub mod ingest;
+pub mod cubecobra;
+pub mod local;
+pub mod scryfall;

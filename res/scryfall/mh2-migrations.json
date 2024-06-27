@@ -1,0 +1,112 @@
+[
+  {
+    "id": "9c20d069-291c-4137-9808-2c8a2cb7b4f2",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "f1a0f167-ff92-4606-bd10-7252428821b2",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/9c20d069-291c-4137-9808-2c8a2cb7b4f2"
+  },
+  {
+    "id": "38da55af-a748-45d0-a740-40a2876c2a48",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "154c9443-d33d-4286-bd62-80bb52510d42",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/38da55af-a748-45d0-a740-40a2876c2a48"
+  },
+  {
+    "id": "a3533690-fc36-4e42-95a7-80c542e30898",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "cd7dd0b6-df2b-4369-816a-70809389f963",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/a3533690-fc36-4e42-95a7-80c542e30898"
+  },
+  {
+    "id": "bb7a3b20-c9d1-4b28-a7cc-ff6f910df582",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "56a3b385-bee9-47bc-bf9c-ecd61b9d56aa",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/bb7a3b20-c9d1-4b28-a7cc-ff6f910df582"
+  },
+  {
+    "id": "00226481-7c60-4b2e-9463-07dfe3f1a3de",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "2d85f73d-d8b0-4dbc-9779-af475929858d",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/00226481-7c60-4b2e-9463-07dfe3f1a3de"
+  },
+  {
+    "id": "9e4e73f9-7b39-48a9-8c6f-3df6b4705f6f",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "f3f96f46-d98e-4385-88fc-18aa156af11a",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/9e4e73f9-7b39-48a9-8c6f-3df6b4705f6f"
+  },
+  {
+    "id": "cf2ee889-7bb8-40ae-ad6a-97ff7db1bc10",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "bc2ce229-a418-436f-97e4-545f64d510a2",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/cf2ee889-7bb8-40ae-ad6a-97ff7db1bc10"
+  },
+  {
+    "id": "e68eaba9-679a-4ae6-b366-b9206d8ac15a",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "04743c8c-2ba5-4eeb-b294-b60da7d07ce2",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/e68eaba9-679a-4ae6-b366-b9206d8ac15a"
+  },
+  {
+    "id": "dfda3853-dac3-40e2-bd7b-e7743c91d561",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "fc3df137-d5c6-4441-84df-61d7380b54d2",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/dfda3853-dac3-40e2-bd7b-e7743c91d561"
+  },
+  {
+    "id": "715c9f3e-b253-4488-90b2-dd129d030d16",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "8b3a7bfd-b5be-4d58-88c5-c8624273c8ed",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/715c9f3e-b253-4488-90b2-dd129d030d16"
+  },
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/e45229a7-f879-45b4-8d01-36117a039530","id":"e45229a7-f879-45b4-8d01-36117a039530","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"accc07ea-a095-4722-84ce-54577071563d","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/5bb9eb85-25e7-4898-8138-2a7cae6e7143","id":"5bb9eb85-25e7-4898-8138-2a7cae6e7143","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"4ef3e08f-c547-4405-be7e-5db7d4d6e9ce","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/92499997-697b-4429-9eb0-5318e96af697","id":"92499997-697b-4429-9eb0-5318e96af697","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"550da80e-bb70-41b4-806f-a40f13814daf","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/3ebe0177-81ff-4f5f-8d3f-988ca2126992","id":"3ebe0177-81ff-4f5f-8d3f-988ca2126992","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"887e05a6-731d-452d-8609-0abff1c21e2c","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/b1d753b1-facf-4474-9f1c-97ee70f30618","id":"b1d753b1-facf-4474-9f1c-97ee70f30618","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"a4850c94-5300-430f-aba5-1071e76f4077","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/c86dea15-3d1e-49ec-9fe6-6ec6cee2b85e","id":"c86dea15-3d1e-49ec-9fe6-6ec6cee2b85e","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"22d14a8b-2b2c-43d6-ad6e-a99cec6c54a0","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/90ff4973-7932-472f-9ca8-0ff725d8c8e9","id":"90ff4973-7932-472f-9ca8-0ff725d8c8e9","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"71a0c7ff-9163-472a-89aa-044abd876489","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/05047980-312e-438e-872c-7f899aca3e35","id":"05047980-312e-438e-872c-7f899aca3e35","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"2138f190-309d-4afe-90d4-1c2bf50eaa39","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/91a2fe36-70dc-42ad-a46e-621c3a1ee3c7","id":"91a2fe36-70dc-42ad-a46e-621c3a1ee3c7","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"251d6c90-1d5f-4852-9aee-98970db0dad9","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/c1c27376-d62e-403e-9907-e45fca8720db","id":"c1c27376-d62e-403e-9907-e45fca8720db","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"fb61a32c-8edc-4212-9b69-3554b4348734","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {"object":"migration","uri":"https://api.scryfall.com/migrations/b24ef476-f84f-4d13-a4e2-ddeedcc61cd1","id":"b24ef476-f84f-4d13-a4e2-ddeedcc61cd1","performed_at":"2023-04-18","migration_strategy":"delete","old_scryfall_id":"4e938416-d5ae-40a3-81a2-3c861b7fbbc9","note":"Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2"},
+  {
+    "id": "4ca61997-1077-4b2f-9816-0c05d01ae036",
+    "migration_strategy": "delete",
+    "note": "Prerelease promos did not exist for reprint rares/mythics besides fetchlands in MH2",
+    "object": "migration",
+    "old_scryfall_id": "e4e4cb49-a63b-4c36-8c07-05e14fcfc351",
+    "performed_at": "2023-04-18",
+    "uri": "https://api.scryfall.com/migrations/4ca61997-1077-4b2f-9816-0c05d01ae036"
+  }
+]

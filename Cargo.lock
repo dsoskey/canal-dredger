@@ -103,11 +103,11 @@ checksum = "514de17de45fdb8dc022b1a7975556c53c86f9f0aa5f534b98977b171857c2c9"
 
 [[package]]
 name = "canal-dredger"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chrono",
  "csv",
- "cubecobra",
+ "cubecobra_client",
  "git2",
  "mtgql",
  "reqwest 0.12.5",
@@ -186,7 +186,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "cubecobra"
+name = "cubecobra_client"
 version = "0.0.1"
 dependencies = [
  "reqwest 0.11.27",
